@@ -25,5 +25,5 @@ do
     docker image rm -f $(docker images slitherkit -q)
 done
 
-docker builder prune -y
+docker builder prune -f -a
 echo "finish!"
