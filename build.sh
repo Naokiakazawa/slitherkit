@@ -1,16 +1,11 @@
 #!/bin/sh
 
-# Solidity version: 0.8.4 - 0.8.15
+# Solidity version: 0.8.0 - 0.8.15
 # Slither version: v0.8.3
-
-echo "check environment"
-#docker images slitherkit | grep 
-
-
 
 echo "start building"
 
-for ver in {4..15}
+for ver in {0..15}
 do
     version="0.8.$ver"
     echo "===> Build a docker image of $version"
@@ -26,4 +21,4 @@ do
 done
 
 docker builder prune -f -a
-echo "finish!"
+echo "Finish!"
